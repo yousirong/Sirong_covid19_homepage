@@ -260,6 +260,7 @@
   background: none;
 }
 .home-section {
+  /* 첫 화면 본인 소개 부분 */
   position: relative;
   background: #e4e9f7;
   min-height: 100vh;
