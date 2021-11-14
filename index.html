@@ -20,6 +20,8 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
   <body>
     <!-- Move to up button -->
     <div class="scroll-button">
@@ -62,13 +64,6 @@
           <input type="text" placeholder="Search..." />
           <span class="tooltip">Search</span>
         </li>
-        <!-- <li>
-          <a href="#">
-            <i class="bx bx-grid-alt"></i>
-            <span class="links_name">Dashboard</span>
-          </a>
-          <span class="tooltip">Dashboard</span>
-        </li> -->
         <li>
           <a href="#">
             <i class="bx bx-user"></i>
@@ -156,6 +151,14 @@
         }
       }
     </script>
+    <!-- 특정 스크롤 영역을 지날때 오디오 재생 -->
+    <div id="sidebox">
+      <div id="info">
+        <input type="button" onclick="audio.play();" value="Play" />
+        <input type="button" onclick="audio.pause();" value="Stop" />
+      </div>
+    </div>
+
     <!-- Home Section Start -->
     <section class="home" id="home">
       <div class="home-content">
@@ -346,7 +349,6 @@
         >
       </div>
     </footer>
-
     <script src="script.js"></script>
   </body>
 </html>
