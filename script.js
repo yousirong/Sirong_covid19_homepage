@@ -50,7 +50,8 @@ audio.play()
 $(window).scroll(function () {
   var position = $(window).scrollTop()
   $('#info').innerText = position
-  if (position > 100) {
+  if (position > 500) {
+    // 스크롤로 500내려갔을 때 배경음 시작
     console.log('detect')
     audio.play()
   }

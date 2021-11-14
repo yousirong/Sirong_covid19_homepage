@@ -28,10 +28,9 @@
 #sidebox {
   background-color: #f0f0f0;
   position: absolute;
-  width: 120px;
-  top: 433px;
-  right: 420px;
-  padding: 3px 10px;
+  width: 20px;
+  top: 60px;
+  right: 230px;
 }
 
 /* sidebar style */
