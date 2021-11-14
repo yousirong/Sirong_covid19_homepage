@@ -365,10 +365,10 @@ nav.sticky .menu-btn {
   font-family: 'Ubuntu', sans-serif;
 }
 .home .home-content {
-  width: 90%;
+  width: 70%;
   height: 100%;
   margin: auto;
-  padding: 13px 60px;
+  padding: 20px 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
