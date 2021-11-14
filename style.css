@@ -8,17 +8,17 @@
   scroll-behavior: smooth;
 }
 
-/* Custom Scroll Bar CSS */
+/* Scroll Bar 모양 커스텀  */
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #fdfdfd;
 }
 ::-webkit-scrollbar-thumb {
   background: #002d56;
   border-radius: 12px;
-  transition: all 0.3s ease;
+  transition: all 0.28s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -26,27 +26,27 @@
 }
 /* sidebox style */
 #sidebox {
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   position: absolute;
   width: 20px;
   top: 60px;
   right: 230px;
 }
 
-/* sidebar style */
+/* sidebar style for CSS */
 .sidebar {
   position: fixed;
-  left: 00;
+  left: 0;
   top: 0;
   height: 100%;
   width: 78px;
   background: #11101d;
   padding: 6px 14px;
   z-index: 99;
-  transition: all 0.5s ease;
+  transition: all 0.45s ease;
 }
 .sidebar.open {
-  width: 250px;
+  width: 220px;
 }
 .sidebar .logo-details {
   height: 60px;
@@ -211,31 +211,38 @@
   overflow: hidden;
 }
 .sidebar.open li.profile {
-  width: 250px;
+  /* 왼쪽 사이드바 아래 로그아웃 width부분 */
+  width: 220px;
 }
 .sidebar li .profile-details {
+  /* 왼쪽 사이드바 아래 profile부분*/
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
 }
 .sidebar li img {
-  height: 45px;
-  width: 45px;
+  /* 왼쪽 사이드바 아래 로그아웃 부분 사진*/
+  height: 50px;
+  width: 50px;
   object-fit: cover;
-  border-radius: 6px;
-  margin-right: 10px;
+  border-radius: 9px;
+  margin-right: 15px;
 }
+
 .sidebar li.profile .name,
 .sidebar li.profile .job {
+  /* 왼쪽 사이드바 아래 로그아웃 부분 이름과 신분 */
   font-size: 15px;
   font-weight: 400;
   color: #fff;
   white-space: nowrap;
 }
 .sidebar li.profile .job {
+  /* 왼쪽 사이드바 아래 로그아웃 부분 이름과 신분 */
   font-size: 12px;
 }
 .sidebar .profile #log_out {
+  /* 왼쪽 사이드바 아래 로그아웃 부분 반응 */
   position: absolute;
   top: 50%;
   right: 0;
@@ -245,9 +252,10 @@
   height: 60px;
   line-height: 60px;
   border-radius: 0px;
-  transition: all 0.5s ease;
+  transition: all 0.45s ease;
 }
 .sidebar.open .profile #log_out {
+  /* 왼쪽 사이드바 아래 로그아웃 부분 반응 */
   width: 50px;
   background: none;
 }
@@ -275,14 +283,14 @@
 nav {
   position: fixed;
   width: 100%;
-  padding: 20px 60px;
+  padding: 13px 70px;
   z-index: 90;
   transition: all 0.3s ease;
   font-family: 'Ubuntu', sans-serif;
 }
 nav.sticky {
   background: #002d56;
-  padding: 13px 60px;
+  padding: 13px 70px;
 }
 nav .navbar {
   width: 90%;
@@ -365,10 +373,10 @@ nav.sticky .menu-btn {
   font-family: 'Ubuntu', sans-serif;
 }
 .home .home-content {
-  width: 70%;
+  width: 90%;
   height: 100%;
   margin: auto;
-  padding: 20px 70px;
+  padding: 10px 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -423,7 +431,7 @@ section {
 section .content {
   width: 80%;
   margin: 40px auto;
-  padding: 13px 60px;
+  padding: 13px 80px;
   font-family: 'Poppins', sans-serif;
 }
 .about .about-details {
@@ -507,7 +515,7 @@ section .button button:hover {
   background: #f0f8ff;
 }
 .skills .content {
-  padding: 13px 60px;
+  padding: 13px 80px;
 }
 .skills .skills-details {
   display: flex;
@@ -643,7 +651,7 @@ footer .text span a {
 footer .text span a:hover {
   text-decoration: underline;
 }
-/* Scroll TO Top Button CSS */
+/* Scroll Top Button CSS */
 .scroll-button a {
   position: fixed;
   bottom: 20px;
@@ -653,7 +661,7 @@ footer .text span a:hover {
   padding: 7px 12px;
   font-size: 18px;
   border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(73, 48, 48, 0.3);
   display: none;
 }
 
