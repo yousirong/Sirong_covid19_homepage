@@ -274,11 +274,6 @@
   left: 250px;
   width: calc(100% - 250px);
 }
-@media (max-width: 420px) {
-  .sidebar li .tooltip {
-    display: none;
-  }
-}
 
 /* navbar styling */
 nav {
@@ -557,6 +552,14 @@ section .button button:hover {
 .skills-details .experience .num {
   color: #0e2431;
   font-size: 80px;
+  background-image: linear-gradient(
+    -225deg,
+    #473b7b 0%,
+    #3584a7 51%,
+    #30d2be 100%
+  );
+  -webkit-text-fill-color: transparent; /* 배경 그라데이션을 집어넣고 글씨를 투명하게 한 후 글씨만 오려냈습니다.*/
+  -webkit-background-clip: text;
 }
 .skills-details .experience .exp {
   color: #0e2431;
@@ -582,6 +585,14 @@ section .button button:hover {
 .skills-details .boxes .per {
   font-size: 60px;
   color: #002d56;
+  background-image: linear-gradient(
+    -225deg,
+    #473b7b 0%,
+    #3584a7 51%,
+    #30d2be 100%
+  );
+  -webkit-text-fill-color: transparent; /* 배경 그라데이션을 집어넣고 글씨를 투명하게 한 후 글씨만 오려냈습니다.*/
+  -webkit-background-clip: text;
 }
 
 /* My Services CSS */
@@ -722,7 +733,13 @@ footer .text span a:hover {
     width: 350px;
   }
 }
+@media (max-width: 420px) {
+  /*왼쪽 사이드바 반응형 */
 
+  .sidebar li .tooltip {
+    display: none;
+  }
+}
 @media (max-width: 750px) {
   nav .navbar {
     width: 90%;
@@ -772,12 +789,12 @@ footer .text span a:hover {
   }
   .skills-details .text {
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
   .skills-details .boxes {
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 130%;
   }
   .services .boxes .box {
     margin: 20px 0;
