@@ -1,5 +1,5 @@
 /* Google Font CDN Link */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Ubuntu:wght@300&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -364,6 +364,7 @@ nav.sticky .menu-btn {
 }
 
 /* home section styling */
+/*글씨 배경색은 www.webgradient.com에서 css 가져옴*/
 .home {
   height: 100vh; /* vh = viewport height, vw=viewport width 현재 실행중인 스크린 크기에 맞춰 상대적 크기를 반환*/
   width: 100%;
@@ -385,22 +386,40 @@ nav.sticky .menu-btn {
 .home .text-one {
   font-size: 25px;
   color: #0e2431;
+  background-image: linear-gradient(
+    -225deg,
+    #473b7b 0%,
+    #3584a7 51%,
+    #30d2be 100%
+  );
+  -webkit-text-fill-color: transparent; /* 배경 그라데이션을 집어넣고 글씨를 투명하게 한 후 글씨만 오려냈습니다.*/
+  -webkit-background-clip: text;
 }
 .home .text-two {
   color: #0e2431;
   font-size: 75px;
   font-weight: 600;
   margin-left: -3px;
+  background-image: linear-gradient(
+    -225deg,
+    #473b7b 0%,
+    #3584a7 51%,
+    #30d2be 100%
+  );
+  -webkit-text-fill-color: transparent; /* 배경 그라데이션을 집어넣고 글씨를 투명하게 한 후 글씨만 오려냈습니다.*/
+  -webkit-background-clip: text;
 }
 .home .text-three {
   font-size: 40px;
   margin: 5px 0;
   color: #002d56;
+  -webkit-background-clip: text;
 }
 .home .text-four {
   font-size: 23px;
   margin: 5px 0;
   color: #0e2431;
+  -webkit-background-clip: text;
 }
 .home .button {
   margin: 14px 0;
@@ -582,7 +601,13 @@ section .button button:hover {
   transition: all 0.4s ease;
 }
 .services .boxes .box:hover {
-  background: #002d56;
+  /* background: #002d56; */
+  background-image: linear-gradient(
+    -225deg,
+    #473b7b 0%,
+    #3584a7 51%,
+    #30d2be 100%
+  );
   color: #fff;
 }
 .services .boxes .box .icon {
