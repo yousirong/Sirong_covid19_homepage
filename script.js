@@ -65,3 +65,11 @@ $(window).scroll(function () {
     .stop()
     .animate({ top: position + currentPosition + 'px' }, 1000)
 })
+
+// slick
+$('.autoplay').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+})
