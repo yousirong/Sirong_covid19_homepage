@@ -670,7 +670,7 @@ section .button button:hover {
   position: relative;
 
   display: block;
-  overflow: absolute;
+  overflow: hidden;
 
   margin: 0px;
   padding: 0px 0px;
@@ -695,7 +695,7 @@ section .button button:hover {
 .slick-track {
   position: relative;
   top: 0;
-  left: 0;
+  left: 80px;
 
   display: block;
   margin-left: auto;
@@ -725,10 +725,11 @@ section .button button:hover {
 }
 .slick-slide img {
   display: block;
-  width: calc(100% - 19px);
+  width: calc(100% - 78px);
 }
 .slick-slide.slick-loading img {
-  width: 600px;
+  display: none;
+  width: 100%;
   max-width: 100%;
   height: auto;
 }
