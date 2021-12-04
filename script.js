@@ -58,7 +58,6 @@ for (var i = 0; i < navLinks.length; i++) {
 // 스크롤로 100px 영역을 지날때 자동적으로 사운드가 재생됩니다.
 //재생 되더라도 버튼으로 제어도 가능합니다.
 var audio = new Audio('Happy Moments.mp3') // 마지막에 음악추가 주석 제거하기
-audio.play()
 $(window).scroll(function () {
   var position = $(window).scrollTop()
   $('#info').innerText = position
