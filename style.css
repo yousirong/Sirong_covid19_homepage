@@ -211,17 +211,17 @@
   overflow: hidden;
 }
 .sidebar.open li.profile {
-  /* 왼쪽 사이드바 아래 로그아웃 width부분 */
+  /* left side bar 아래 로그아웃 width부분 */
   width: 220px;
 }
 .sidebar li .profile-details {
-  /* 왼쪽 사이드바 아래 profile부분*/
+  /* left side bar아래 profile부분*/
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
 }
 .sidebar li img {
-  /* 왼쪽 사이드바 아래 로그아웃 부분 사진*/
+  /* left side bar 아래 로그아웃 부분 사진*/
   height: 50px;
   width: 50px;
   object-fit: cover;
@@ -231,18 +231,18 @@
 
 .sidebar li.profile .name,
 .sidebar li.profile .job {
-  /* 왼쪽 사이드바 아래 로그아웃 부분 이름과 신분 */
+  /*left side bar로그아웃 부분 이름과 신분 */
   font-size: 15px;
   font-weight: 400;
   color: #fff;
   white-space: nowrap;
 }
 .sidebar li.profile .job {
-  /* 왼쪽 사이드바 아래 로그아웃 부분 이름과 신분 */
+  /*left side bar 로그아웃 부분 이름과 신분 */
   font-size: 12px;
 }
 .sidebar .profile #log_out {
-  /* 왼쪽 사이드바 아래 로그아웃 부분 반응 */
+  /* left side bar 로그아웃 부분 반응 */
   position: absolute;
   top: 50%;
   right: 0;
@@ -255,12 +255,12 @@
   transition: all 0.45s ease;
 }
 .sidebar.open .profile #log_out {
-  /* 왼쪽 사이드바 아래 로그아웃 부분 반응 */
+  /* left side bar -> undergroun 로그아웃 부분 반응 */
   width: 50px;
   background: none;
 }
 .home-section {
-  /* 첫 화면 본인 소개 부분 */
+  /* main page section */
   position: relative;
   background: #e4e9f7;
   min-height: 100vh;
@@ -275,7 +275,7 @@
   width: calc(100% - 250px);
 }
 
-/* navbar styling */
+/* navbar styling  상단 navigation bar 부분 */
 nav {
   position: fixed;
   width: 100%;
@@ -437,7 +437,7 @@ nav.sticky .menu-btn {
   color: #b56e2b;
 }
 
-/* About Section Styling */
+/* About Section Styling CSS */
 /* Those Elements Where We Have Apply Same CSS,
  I'm Selecting Directly 'Section Tag' and 'Class'  */
 section {
@@ -647,7 +647,8 @@ section .button button:hover {
   color: #fff;
 }
 
-/* Slider */
+/* Slider slickmin.js 이용 */
+/* 광고배너를 옆으로 slider하게 만들어주는 slide는 안보임. 대신 광고를 block을 클릭해서 옆으로 이동가능*/
 .slick-slider {
   position: relative;
 
@@ -665,7 +666,7 @@ section .button button:hover {
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
 }
-
+/* 광고 배너는 block*/
 .slick-list {
   position: relative;
 
@@ -678,6 +679,7 @@ section .button button:hover {
 .slick-list:focus {
   outline: none;
 }
+/* drag을 통해서 광고 배너 옆으로 slide가능*/
 .slick-list.dragging {
   cursor: pointer;
   cursor: hand;
@@ -723,6 +725,7 @@ section .button button:hover {
 [dir='rtl'] .slick-slide {
   float: right;
 }
+/*최대한 광고 배너 이미지는 화면의 크기에 따라 변환 -> 동적 홈페이지*/
 .slick-slide img {
   display: block;
   width: calc(100% - 78px);
@@ -739,6 +742,7 @@ section .button button:hover {
 .slick-initialized .slick-slide {
   display: block;
 }
+/* slide bar 안보이게 함. */
 .slick-loading .slick-slide {
   visibility: hidden;
 }
@@ -809,7 +813,8 @@ footer .text span a:hover {
   display: none;
 }
 
-/* Responsive Media Query */
+/* Responsive Media Query  반응형 홈페이지를 만들기위한 반응 css*/
+/* 스마트폰이나 윈도우 화면이나 어느 정도의 width 이하로 같을경우 hidden 어느 정도의 width이상일 경우 같이 줄어듬. */
 @media (max-width: 1190px) {
   section .content {
     width: 85%;
@@ -841,7 +846,7 @@ footer .text span a:hover {
   }
 }
 @media (max-width: 420px) {
-  /*왼쪽 사이드바 반응형 */
+  /*왼쪽 사이드바 반응 */
 
   .sidebar li .tooltip {
     display: none;

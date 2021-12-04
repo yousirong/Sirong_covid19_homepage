@@ -45,7 +45,7 @@ cancelBtn.onclick = function () {
   scrollBtn.style.pointerEvents = 'auto'
 }
 
-// Side Navigation Bar Close While We Click On Navigation Links
+// Side Navigation Bar 에 가까워지거나 navigation 링크로 클릭해서 이동 할 때
 let navLinks = document.querySelectorAll('.menu li a')
 for (var i = 0; i < navLinks.length; i++) {
   navLinks[i].addEventListener('click', function () {
@@ -67,7 +67,7 @@ $(window).scroll(function () {
     audio.play()
   }
 })
-
+// 맨위로 올려보네주는 왼쪽 하단 위로 향하는 화살표 박스  ( 스크롤 내릴 때 같이 내려감.)
 var currentPosition = parseInt($('#sidebox').css('top'))
 $(window).scroll(function () {
   var position = $(window).scrollTop()
@@ -76,7 +76,7 @@ $(window).scroll(function () {
     .animate({ top: position + currentPosition + 'px' }, 1000)
 })
 
-// slick
+// slick  광고 배너 옆으로 자동으로 이동해주는 slick js
 $('.autoplay').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
