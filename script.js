@@ -1,4 +1,5 @@
 //home -> home-content -> text-two -> auto-input
+// 글자 한개씩 출력 되다가 다시 한글자씩 사라짐
 var typed = new Typed('.auto-input', {
   strings: [
     'Juneyong Lee',
@@ -11,6 +12,7 @@ var typed = new Typed('.auto-input', {
   loop: true,
 })
 // Sticky Navigation Menu JS Code
+// 스크롤로 높이 20px 내려가면 색 바뀜 + 글자 커짐
 let nav = document.querySelector('nav')
 let scrollBtn = document.querySelector('.scroll-button a')
 console.log(scrollBtn)
@@ -25,7 +27,7 @@ window.onscroll = function () {
   }
 }
 
-// Side NavIgation Menu JS Code
+//  NavIgation Menu JS Code
 let body = document.querySelector('body')
 let navBar = document.querySelector('.navbar')
 let menuBtn = document.querySelector('.menu-btn')
