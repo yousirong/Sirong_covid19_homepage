@@ -118,6 +118,7 @@
   pointer-events: none;
   transition: 0s;
 }
+
 /*pointer 올렸을 때 옆으로 툴팁이 나옴*/
 .sidebar li:hover .tooltip {
   opacity: 1;
@@ -439,8 +440,7 @@ nav.sticky .menu-btn {
 }
 
 /* About Section Styling CSS */
-/* Those Elements Where We Have Apply Same CSS,
- I'm Selecting Directly 'Section Tag' and 'Class'  */
+
 section {
   padding-top: 40px;
 }
