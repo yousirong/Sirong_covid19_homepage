@@ -24,9 +24,8 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #002d56;
 }
-/* sidebox style */
+/* bgm 부분 style */
 #sidebox {
-  background-color: #ffffff;
   position: absolute;
   width: 20px;
   top: 60px;

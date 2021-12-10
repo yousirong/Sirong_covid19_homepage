@@ -59,7 +59,7 @@ for (var i = 0; i < navLinks.length; i++) {
 
 // 스크롤로 100px 영역을 지날때 자동적으로 사운드가 재생됩니다.
 //재생 되더라도 버튼으로 제어도 가능합니다.
-var audio = new Audio('Happy Moments.mp3') // 마지막에 음악추가 주석 제거하기
+var audio = new Audio('Happy Moments.mp3')
 $(window).scroll(function () {
   var position = $(window).scrollTop()
   $('#info').innerText = position
@@ -67,9 +67,10 @@ $(window).scroll(function () {
     // 스크롤로 500내려갔을 때 배경음 시작
     console.log('detect')
     audio.play()
+    audio.pause()
   }
 })
-// 맨위로 올려보네주는 왼쪽 하단 위로 향하는 화살표 박스  ( 스크롤 내릴 때 같이 내려감.)
+// 맨위로 올려보네주는 왼쪽 하단 위로 향하는 화살표 박스  (스크롤 내릴 때 같이 내려감.)
 var currentPosition = parseInt($('#sidebox').css('top'))
 $(window).scroll(function () {
   var position = $(window).scrollTop()
