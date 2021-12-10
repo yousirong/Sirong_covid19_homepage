@@ -302,6 +302,7 @@ nav .navbar .logo a {
   color: #002d56;
 }
 nav.sticky .navbar .logo a {
+  font-size: 45px;
   color: #fff;
 }
 nav .navbar .menu {
@@ -326,7 +327,7 @@ nav.sticky .menu a {
   color: #fff;
 }
 nav.sticky .menu a:hover {
-  color: #0e2431;
+  color: #7dc6f0;
 }
 .navbar .media-icons a {
   color: #002d56;
