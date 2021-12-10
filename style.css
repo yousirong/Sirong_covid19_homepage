@@ -846,9 +846,8 @@ footer .text span a:hover {
     width: 350px;
   }
 }
+/*왼쪽 사이드바 반응 */
 @media (max-width: 420px) {
-  /*왼쪽 사이드바 반응 */
-
   .sidebar li .tooltip {
     display: none;
   }
