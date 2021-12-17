@@ -7,7 +7,79 @@
   text-decoration: none;
   scroll-behavior: smooth;
 }
+/* Section Styling CSS */
+/* 모든 section css 효과 */
+section {
+  padding-top: 40px;
+}
+/* 모든 section font margin padding... */
+section .content {
+  width: 80%;
+  margin: 40px auto;
+  padding: 13px 80px;
+  font-family: 'Poppins', sans-serif;
+}
+/* about section details */
 
+/* 각 section 제목 부분  */
+section .title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+section .title span {
+  color: #0e2431;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 8px;
+}
+section .title span::before,
+section .title span::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #002d56;
+  left: 0;
+  bottom: 0;
+}
+section .title span::after {
+  bottom: -7px;
+  width: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+section .topic {
+  color: #0e2431;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.about-details .right p {
+  text-align: justify;
+  color: #0e2431;
+}
+section .button {
+  margin: 16px 0;
+}
+section .button button {
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 25px;
+  font-weight: 400;
+  background: #002d56;
+  color: #fff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+section .button button:hover {
+  border-color: #b56e2b;
+  background-color: #fff;
+  color: #b56e2b;
+}
 /* Scroll Bar 모양 커스텀  */
 ::-webkit-scrollbar {
   width: 10px;
@@ -44,15 +116,18 @@
   z-index: 99;
   transition: all 0.45s ease;
 }
+/* sidebar click 후 열었을 때 width */
 .sidebar.open {
   width: 220px;
 }
+/* sidebar logo icon 디테일 */
 .sidebar .logo-details {
   height: 60px;
   display: flex;
   align-items: center;
   position: relative;
 }
+/* icon 눌렀을 때 효과->0 */
 .sidebar .logo-details .icon {
   opacity: 0;
 
@@ -65,10 +140,12 @@
   opacity: 0;
   transition: all 0.5s ease;
 }
+/* icon 눌렀을 때 효과->1  */
 .sidebar.open .logo-details .icon,
 .sidebar.open .logo-details .logo_name {
   opacity: 1;
 }
+/* let closeBtn = document.querySelector('#btn') */
 .sidebar .logo-details #btn {
   position: absolute;
   top: 50%;
@@ -81,9 +158,11 @@
   cursor: pointer;
   transition: all 0.5s ease;
 }
+/* let closeBtn = document.querySelector('#btn') */
 .sidebar.open .logo-details #btn {
   text-align: right;
 }
+/* sidebar icon list i>nav-list */
 .sidebar i {
   color: #fff;
   height: 60px;
@@ -96,11 +175,13 @@
   margin-top: 20px;
   height: 100%;
 }
+/* sidebar > li */
 .sidebar li {
   position: relative;
   margin: 8px 0;
   list-style: none;
 }
+/* sidebar > li >tooltip */
 .sidebar li .tooltip {
   position: absolute;
   top: -20px;
@@ -126,9 +207,11 @@
   top: 50%;
   transform: translateY(-50%);
 }
+/* sidebar open이 된 경우 hover되도 tooltip은 나오지 않음 */
 .sidebar.open li .tooltip {
   display: none;
 }
+/* sidebar > li>search 검색창 */
 .sidebar input {
   font-size: 15px;
   color: #fff;
@@ -142,6 +225,7 @@
   transition: all 0.5s ease;
   background: #1d1b31;
 }
+/* sidebar open된 후 search부분 */
 .sidebar.open input {
   padding: 0 20px 0 50px;
   width: 100%;
@@ -159,10 +243,12 @@
   background: #1d1b31;
   color: #fff;
 }
+/* icon은 하얀색 배경은 검은색 + font는 당연히 하얀색 처리*/
 .sidebar .bx-search:hover {
   background: #fff;
   color: #11101d;
 }
+/* a href = "#"부분 */
 .sidebar li a {
   display: flex;
   height: 100%;
@@ -176,6 +262,7 @@
 .sidebar li a:hover {
   background: #fff;
 }
+/* 글씨 눌렀을 때 반응  */
 .sidebar li a .links_name {
   color: #fff;
   font-size: 15px;
@@ -194,12 +281,14 @@
   transition: all 0.5s ease;
   color: #11101d;
 }
+/* li > i는 bs icon 반응 */
 .sidebar li i {
   height: 50px;
   line-height: 50px;
   font-size: 18px;
   border-radius: 12px;
 }
+/* sidebar 왼쪽 하단 profile 부분 */
 .sidebar li.profile {
   position: fixed;
   height: 60px;
@@ -229,10 +318,9 @@
   border-radius: 9px;
   margin-right: 15px;
 }
-
+/*left side bar로그아웃 부분 이름과 신분 */
 .sidebar li.profile .name,
 .sidebar li.profile .job {
-  /*left side bar로그아웃 부분 이름과 신분 */
   font-size: 15px;
   font-weight: 400;
   color: #fff;
@@ -278,6 +366,7 @@
 
 /* navbar styling  상단 navigation bar 부분 */
 nav {
+  /* main #home에서의 nav bar */
   position: fixed;
   width: 100%;
   padding: 13px 70px;
@@ -286,9 +375,11 @@ nav {
   font-family: 'Ubuntu', sans-serif;
 }
 nav.sticky {
+  /* #home을 벗어난 nav bar */
   background: #002d56;
   padding: 13px 70px;
 }
+/* nav bar content */
 nav .navbar {
   width: 90%;
   display: flex;
@@ -296,15 +387,18 @@ nav .navbar {
   align-items: center;
   margin: auto;
 }
+/* nav bar logo 왼쪽 상단 */
 nav .navbar .logo a {
   font-weight: 500;
   font-size: 35px;
   color: #002d56;
 }
+/* nav bar logo #home을 벗어난 경우 글씨 하얀색 + font size 커짐 */
 nav.sticky .navbar .logo a {
   font-size: 45px;
   color: #fff;
 }
+/* nav bar는 window size에 맞게 flex */
 nav .navbar .menu {
   display: flex;
   position: relative;
@@ -313,6 +407,7 @@ nav .navbar .menu li {
   list-style: none;
   margin: 0 8px;
 }
+/* nav bar menu 글씨 link + response */
 .navbar .menu a {
   font-size: 18px;
   font-weight: 500;
@@ -320,9 +415,11 @@ nav .navbar .menu li {
   padding: 6px 0;
   transition: all 0.4s ease;
 }
+/* nav bar menu 글씨 마우스 올렸을 때 response */
 .navbar .menu a:hover {
   color: #002d56;
 }
+/* #home을 벗어난 후 글씨 response */
 nav.sticky .menu a {
   color: #fff;
 }
@@ -361,7 +458,7 @@ nav.sticky .menu-btn {
 }
 
 /* home section styling */
-/*글씨 배경색은 www.webgradient.com에서 css 가져옴*/
+/*글씨 배경색은 www.webgradient.com에서 css 가져옴  -> 그라데이션 효과부분*/
 .home {
   height: 100vh; /* vh = viewport height, vw=viewport width 현재 실행중인 스크린 크기에 맞춰 상대적 크기를 반환*/
   width: 100%;
@@ -371,6 +468,7 @@ nav.sticky .menu-btn {
   background-attachment: fixed;
   font-family: 'Ubuntu', sans-serif;
 }
+/* home section 글씨 content */
 .home .home-content {
   width: 90%;
   height: 100%;
@@ -380,6 +478,7 @@ nav.sticky .menu-btn {
   flex-direction: column;
   justify-content: center;
 }
+/* hello부분 */
 .home .text-one {
   font-size: 25px;
   color: #0e2431;
@@ -392,6 +491,7 @@ nav.sticky .menu-btn {
   -webkit-text-fill-color: transparent; /* 배경 그라데이션을 집어넣고 글씨를 투명하게 한 후 글씨만 오려냈습니다.*/
   -webkit-background-clip: text;
 }
+/* I'm 부분 */
 .home .text-two {
   color: #0e2431;
   font-size: 75px;
@@ -406,18 +506,21 @@ nav.sticky .menu-btn {
   -webkit-text-fill-color: transparent; /* 배경 그라데이션을 집어넣고 글씨를 투명하게 한 후 글씨만 오려냈습니다.*/
   -webkit-background-clip: text;
 }
+/* Hankuk부분 */
 .home .text-three {
   font-size: 40px;
   margin: 5px 0;
   color: #002d56;
   -webkit-background-clip: text;
 }
+/* My progress */
 .home .text-four {
   font-size: 23px;
   margin: 5px 0;
   color: #0e2431;
   -webkit-background-clip: text;
 }
+/* let's get it 버튼 부분  */
 .home .button {
   margin: 14px 0;
 }
@@ -433,59 +536,24 @@ nav.sticky .menu-btn {
   border: 2px solid transparent;
   transition: all 0.4s ease;
 }
+/* home section button hover  */
 .home .button button:hover {
   border-color: #b56e2b;
   background-color: #fff;
   color: #b56e2b;
 }
 
-/* About Section Styling CSS */
-
-section {
-  padding-top: 40px;
-}
-section .content {
-  width: 80%;
-  margin: 40px auto;
-  padding: 13px 80px;
-  font-family: 'Poppins', sans-serif;
-}
+/* about section */
 .about .about-details {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-section .title {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-}
-section .title span {
-  color: #0e2431;
-  font-size: 30px;
-  font-weight: 600;
-  position: relative;
-  padding-bottom: 8px;
-}
-section .title span::before,
-section .title span::after {
-  content: '';
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  background: #002d56;
-  left: 0;
-  bottom: 0;
-}
-section .title span::after {
-  bottom: -7px;
-  width: 70%;
-  left: 50%;
-  transform: translateX(-50%);
-}
+/* about 전체 width */
 .about .about-details .left {
   width: 45%;
 }
+/* about section img css */
 .about .left img {
   height: 400px;
   width: 400px;
@@ -495,38 +563,8 @@ section .title span::after {
 .about-details .right {
   width: 55%;
 }
-section .topic {
-  color: #0e2431;
-  font-size: 25px;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-.about-details .right p {
-  text-align: justify;
-  color: #0e2431;
-}
-section .button {
-  margin: 16px 0;
-}
-section .button button {
-  outline: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-size: 25px;
-  font-weight: 400;
-  background: #002d56;
-  color: #fff;
-  border: 2px solid transparent;
-  cursor: pointer;
-  transition: all 0.4s ease;
-}
-section .button button:hover {
-  border-color: #b56e2b;
-  background-color: #fff;
-  color: #b56e2b;
-}
 
-/* My status CSS */
+/* status section */
 .status {
   background: #f0f8ff;
 }

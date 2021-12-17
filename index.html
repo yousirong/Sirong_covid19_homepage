@@ -30,7 +30,7 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
   <body>
-    <!-- Move to up button -->
+    <!-- 왼쪽 하단 화살표 버튼 누르면 home section으로 이동 -->
     <div class="scroll-button">
       <a href="#home"><i class="fas fa-arrow-up"></i></a>
     </div>
@@ -38,8 +38,10 @@
     <!-- <nav> -> navgaition menu -->
     <nav>
       <div class="navbar">
+        <!-- 왼쪽 상단 homepage logo -->
         <div class="logo"><a href="#">June.Y page</a></div>
         <ul class="menu">
+          <!-- word누르면 해당 section으로 이동 -->
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#status">Status</a></li>
@@ -50,6 +52,7 @@
           </div>
         </ul>
         <div class="media-icons">
+          <!-- 오른쪽 상단 facebook twitter instagram-->
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
@@ -61,11 +64,13 @@
     </nav>
     <!-- 왼쪽에 동적 sidebar 추가 -->
     <div class="sidebar">
+      <!-- sidebar first logo => github -->
       <div class="logo-details">
         <i class="bx bxl-github"></i>
         <div class="logo_name">Sirong_d.v_Home</div>
         <i class="bx bx-menu" id="btn"></i>
       </div>
+      <!-- sidebar list는 nav-list -->
       <ul class="nav-list">
         <li>
           <i class="bx bx-search"></i>
@@ -73,6 +78,7 @@
           <span class="tooltip">Search</span>
         </li>
         <li>
+          <!-- tooltip class => mousehover 할 경우  -->
           <a href="#">
             <i class="bx bx-user"></i>
             <span class="links_name">User</span>
@@ -121,6 +127,7 @@
           </a>
           <span class="tooltip">Setting</span>
         </li>
+        <!-- siderbar클릭후 왼쪽 하단 profile 부분  -->
         <li class="profile">
           <div class="profile-details">
             <img src="./Images/about.jpg" alt="profileImg" />
@@ -133,29 +140,29 @@
         </li>
       </ul>
     </div>
-
+    <!--  siderbar click javascript -->
     <script>
       let sidebar = document.querySelector('.sidebar')
       let closeBtn = document.querySelector('#btn')
       let searchBtn = document.querySelector('.bx-search')
-
+      // click후 sidebar open action
       closeBtn.addEventListener('click', () => {
         sidebar.classList.toggle('open')
-        menuBtnChange() //calling the function(optional)
+        menuBtnChange()
       })
 
       searchBtn.addEventListener('click', () => {
-        // Sidebar open when you click on the search iocn
+        // 검색 icon을 클릭하면 사이드바가 열립니다.
         sidebar.classList.toggle('open')
-        menuBtnChange() //calling the function(optional)
+        menuBtnChange()
       })
 
-      // following are the code to change sidebar button(optional)
+      // 다음은 sidebar button 을 변경하는 코드입니다(선택 사항).
       function menuBtnChange() {
         if (sidebar.classList.contains('open')) {
-          closeBtn.classList.replace('bx-menu', 'bx-menu-alt-right') //replacing the iocns class
+          closeBtn.classList.replace('bx-menu', 'bx-menu-alt-right') // icons 클래스 교체
         } else {
-          closeBtn.classList.replace('bx-menu-alt-right', 'bx-menu') //replacing the iocns class
+          closeBtn.classList.replace('bx-menu-alt-right', 'bx-menu') // icons 클래스 교체
         }
       }
     </script>
@@ -168,22 +175,24 @@
       </div>
     </div>
 
-    <!-- Home Section Start -->
+    <!-- Home Section -->
     <section class="home" id="home">
       <div class="home-content">
         <div class="text">
           <div class="text-one">Hello,</div>
+          <!-- auto-input class 한글자 씩 늘어나면서 출력하고 한글자씩 줄어듦 -->
           <div class="text-two">I'm <span class="auto-input"> </span></div>
           <div class="text-three">Hankuk University of Foreign Studies</div>
           <div class="text-four">My progress during covid19</div>
         </div>
+        <!-- button 구현 -->
         <div class="button">
           <button>Let's get it</button>
         </div>
       </div>
     </section>
 
-    <!-- About Section Start -->
+    <!-- About Section -->
     <section class="about" id="about">
       <div class="content">
         <div class="title"><span>About School life</span></div>
@@ -215,7 +224,7 @@
       </div>
     </section>
 
-    <!-- Status Section Start -->
+    <!-- Status Section -->
     <section class="status" id="status">
       <div class="content">
         <div class="title"><span>Domestic Vaccination Status</span></div>
@@ -259,7 +268,9 @@
       </div>
     </section>
 
-    <!-- Industry Section Start explain 코로나 시대에 내가 준비해야될 산업 직군 능력 언어 등등 -->
+    <!-- Industry Section explain 코로나 시대에 내가 준비해야될 산업 직군 능력 언어 등 -->
+    <!-- section -> content -> boxes -> box -> icon  -->
+    <!-- section -> content -> boxes -> box -> topic -->
     <section class="industry" id="industry">
       <div class="content">
         <div class="title"><span>Emerging Industry</span></div>
@@ -268,7 +279,7 @@
             <div class="icon">
               <i class="fas fa-desktop"></i>
             </div>
-            <div class="topic">Program Devlopment</div>
+            <div class="topic">Program Development</div>
             <p>
               최근 AI, AR, VR기술들에 대해 꾸준히 공부하고 있으며, 여러 알고리즘
               문제를 접해 최신 연구 개발에도 넓은 수학적 지식과 알고리즘을
@@ -336,8 +347,9 @@
       </div>
     </section>
 
-    <!-- slide section start -> link other covid page  abs banner -->
+    <!-- slide section -> link other covid page  abs banner -->
     <section class="slide" id="slide">
+      <!-- autoplay는 인터넷 광고 배너처럼 몇초마다 옆으로 지나감. -->
       <div class="autoplay">
         <div>
           <a
@@ -394,7 +406,8 @@
       </div>
     </section>
 
-    <!-- Contact section Start -->
+    <!-- Contact section -->
+    <!-- contact -> content -> title -> text>topic -->
     <section class="contact" id="contact">
       <div class="content">
         <div class="title"><span>Contact Me</span></div>
@@ -411,7 +424,7 @@
       </div>
     </section>
 
-    <!-- Footer Section Start -->
+    <!-- Footer Section -->
     <footer>
       <div class="text">
         <span

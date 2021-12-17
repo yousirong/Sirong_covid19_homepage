@@ -11,7 +11,7 @@ var typed = new Typed('.auto-input', {
   backSpeed: 100,
   loop: true,
 })
-// Sticky Navigation Menu JS Code
+// Sticky Navigation Menu javascript Code
 // 스크롤로 높이 20px 내려가면 색 바뀜 + 글자 커짐
 let nav = document.querySelector('nav')
 let scrollBtn = document.querySelector('.scroll-button a')
@@ -27,7 +27,7 @@ window.onscroll = function () {
   }
 }
 
-//  NavIgation Menu JS Code
+//  NavIgation Menu Javascript Code
 let body = document.querySelector('body')
 let navBar = document.querySelector('.navbar')
 let menuBtn = document.querySelector('.menu-btn')
@@ -47,7 +47,7 @@ cancelBtn.onclick = function () {
   scrollBtn.style.pointerEvents = 'auto'
 }
 
-// Side Navigation Bar 에 가까워지거나 navigation 링크로 클릭해서 이동 할 때
+// <nav> Bar 에 가까워지거나 navigation 링크로 클릭해서 이동 할 때
 let navLinks = document.querySelectorAll('.menu li a')
 for (var i = 0; i < navLinks.length; i++) {
   navLinks[i].addEventListener('click', function () {
